@@ -1,0 +1,29 @@
+<form [formGroup]="hourForecastForm" (ngSubmit)="onSubmit()" class="currentWeatherForm">
+    <input class="currentWeatherForm-input"
+           type="text"
+           formControlName="cityHour"
+           placeholder="Name of your city">
+    <button class="currentWeatherForm-btn">Go</button>
+    <a class="location-btn" (click)="goToCurrentlocation()">Current Location</a>
+  </form>
+  <div class="current-header">
+    <h1>Hourly Weather in {{ hourCityForecast[0]?.cityName }}</h1>
+  </div>
+<div class="container">
+    <div class="hour" *ngFor="let hour of hourCityForecast">
+      <div class="hour-time">
+          <h3>{{ hour.dtime | date: 'shortTime' }}</h3>
+      </div>
+      <div class="hour-description">
+          <div class="icon">
+              <img src="http://openweathermap.org/img/w/{{hour.icon}}.png" alt="icon">
+            </div>
+            <div class="temp">
+              <h3>Temp: {{ hour.temp }}&deg;</h3>
+            </div>
+      </div>
+    </div>
+  </div>
+<div class="wrapper-forecast-btn">
+  <button class="forecast-ten-days-btn" (click)="goToTenDaysWeather()">Forecast for 10 days</button>
+</div>

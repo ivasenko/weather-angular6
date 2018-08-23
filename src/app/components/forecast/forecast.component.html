@@ -1,0 +1,30 @@
+<form [formGroup]="forecastForm" (ngSubmit)="onSubmit()" class="forecastForm">
+  <input class="forecastForm-input"
+         type="text"
+         formControlName="forecastCity"
+         placeholder="Name of your city">
+  <button class="forecastForm-btn">Go</button>
+</form>
+<div class="wrapper-forecast-header">
+    <h1 class="forecast-header">The Weather for 10 days in {{cityForecast[0]?.cityName}}</h1>
+</div>
+<div class="container">
+  <div class="day" *ngFor="let day of cityForecast">
+    <div class="date">
+        <h2 class="date">{{day.dtime | date: 'fullDate'}}</h2>
+    </div>
+    <div class="date-description"> 
+      <div class="icon">
+        <img src="http://openweathermap.org/img/w/{{day.icon}}.png" alt="icon">
+      </div>
+      <div class="temp">
+        <h3>Max: {{day.tempMax}}&deg;</h3>
+        <h3>Min: {{day.tempMin}}&deg;</h3>
+      </div>
+    </div>   
+  </div>
+</div>
+
+
+
+

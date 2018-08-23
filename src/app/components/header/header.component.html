@@ -1,0 +1,13 @@
+<div class="container">
+  <nav class="nav">
+    <h1 class="nav-heading">The Weather Is Fine</h1>
+    <div>
+        <span routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a [routerLink]="['/']" class="nav-item">Current Weather</a>
+          </span>
+          <span routerLinkActive="active">
+            <a [routerLink]="['forecast']" class="nav-item">Forecast for 10 days</a>
+          </span>
+    </div>
+  </nav>
+</div>

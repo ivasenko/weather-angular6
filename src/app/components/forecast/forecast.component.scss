@@ -1,0 +1,31 @@
+@import '../../styles/common';
+@import '../../styles/form';
+
+.forecastForm {
+  @extend .form;
+}
+.forecastForm-input {
+  @extend .form-input;
+}
+.forecastForm-btn {
+  @extend .form-btn;
+}
+.wrapper-forecast-header{
+  text-align: center;
+}
+.day {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 5%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background: $font-color;
+  .date{
+    margin-right: 40%;
+  }
+}

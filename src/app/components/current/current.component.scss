@@ -1,0 +1,55 @@
+@import '../../styles/common';
+@import '../../styles/form';
+
+.container,
+form {
+  text-align: center;
+}
+.wrapper-forecast-btn{
+  text-align: center;
+  .forecast-ten-days-btn{
+    @extend .form-btn;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+}
+.current-header{
+  text-align: center;
+}
+.currentWeatherForm {
+  @extend .form;
+}
+.currentWeatherForm-input {
+  @extend .form-input;
+}
+.currentWeatherForm-btn {
+  @extend .form-btn;
+  margin-right: 20px;
+}
+.location-btn{
+  @extend .form-btn;
+  border-radius: 5px;
+  background: transparent;
+  color: #007788;
+  border-width: 1px;
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  } 
+}
+.hour {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 0 5%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background: $font-color;
+  .hour-time{
+    margin-right: 40%;
+  }
+}
